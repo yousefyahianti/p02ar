@@ -1,0 +1,534 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    direction: rtl;
+}
+
+/* إعدادات الخطوط */
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
+:root {
+    --myBlue: #2c3e50;
+    --myGreen: #1abc9c;
+    --myWhite: #ffffff;
+    --mainFont: "Montserrat";
+    --titleFontSize: 40px;
+}
+
+nav {
+    background-color: var(--myBlue);
+    color: var(--myWhite);
+    font-family: var(--mainFont);
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 22px;
+    padding: 15px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+nav #menuItems {
+    width: 33%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    font-size: 18px;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--myWhite);
+}
+
+nav #menuButton {
+    display: none;
+}
+
+/* ----------------------  banner ---------------------------- */
+
+#banner {
+    text-align: center;
+    background-color: var(--myGreen);
+    padding-top: 30px;
+    padding-bottom: 50px;
+}
+
+#banner>* {
+    margin-top: 25px;
+}
+
+#banner h1 {
+    color: var(--myWhite);
+    text-transform: uppercase;
+    font-size: var(--titleFontSize);
+    font-family: var(--mainFont);
+}
+
+#banner #list {
+    font-size: 29px;
+    color: white;
+}
+
+#bannerPhoto img {
+    max-width: 100%;
+}
+
+#bannerPhoto {
+    width: 240px;
+    display: inline-block;
+    /* margin: 0 auto; */
+}
+
+.lineStarLine {
+    margin: 25px auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 30%;
+
+}
+
+.lineStarLine hr {
+    height: 7px;
+    background-color: #ffffff;
+    opacity: 1;
+    border-radius: 5px;
+}
+
+.lineStarLine svg {
+    fill: var(--myWhite) !important;
+}
+
+
+/* ------------------------------------------------------------ */
+
+#portfolio {
+    text-align: center;
+    background-color: var(--myWhite);
+    padding-top: 50px;
+    /* padding: 70px; */
+}
+
+#portfolio h1 {
+    text-transform: uppercase;
+    color: var(--myBlue);
+    font-size: var(--titleFontSize);
+    font-family: var(--mainFont);
+}
+
+#portfolio .lineStarLine hr {
+    background-color: var(--myBlue) !important;
+}
+
+#portfolio .lineStarLine svg {
+    fill: var(--myBlue) !important;
+}
+
+.portfolioCard {
+    width: 100%;
+    aspect-ratio: 16 / 12;
+    border-radius: 15px;
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#porfolioGallery {
+    height: 110vh;
+    padding: 5%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-content: space-around;
+}
+
+
+.portfolioCard>div {
+    text-align: center;
+    font-family: var(--mainFont);
+    color: var(--myWhite);
+    font-size: 100px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    width: 100%;
+    height: 100%;
+    /* position: relative; */
+    top: 0;
+    left: 0;
+    background-color: var(--myGreen);
+    opacity: 0;
+    transition: 0.3s all;
+}
+
+.portfolioCard>div:hover {
+    opacity: 0.75;
+    transition: 0.7s all;
+}
+
+/*------about------*/
+#about {
+    background-color: #1abc9c;
+    color: white;
+    padding-top: 50px;
+    height: 90vh;
+    min-width: 100% !important;
+    margin-top: 70px;
+}
+
+#about p {
+    font-size: 60px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+#about h4 {
+    font-size: 25px;
+}
+
+.lineStarLine hr {
+    width: 40%;
+    background-color: #ffffff;
+    opacity: 1;
+}
+
+
+.content {
+    margin-top: 30px;
+    height: 100px;
+}
+
+.left-text {
+    position: absolute;
+    left: 13%;
+    width: 45%;
+    max-width: 450px;
+}
+
+.right-text {
+    position: absolute;
+    right: 13%;
+    width: 45%;
+    max-width: 450px;
+
+}
+
+.btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 200px;
+    width: 100%;
+}
+
+button {
+
+    background-color: transparent !important;
+    border: 3px solid white;
+    border-radius: 8px !important;
+    font-size: 18px;
+    padding: 22pxa 30px;
+    color: white;
+    cursor: pointer;
+}
+
+.btn i {
+    margin-right: 10px;
+}
+
+/* .contact-form */
+
+#contact h1 {
+    font-size: 60px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+#contact .lineStarLine hr {
+    color: black;
+    background-color: black;
+}
+
+#contact .lineStarLine svg {
+    fill: black !important;
+}
+
+
+.contact-form {
+    width: 500px;
+    text-align: left;
+    margin: 0 auto;
+
+}
+
+.contact-form h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #1b32b8 !important;
+}
+
+.contact-form label {
+    margin: 10px 0 5px;
+    font-size: 14px;
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form input[type="tel"],
+.contact-form textarea {
+    width: 100%;
+    padding: 8px 0;
+    border: none;
+    border-bottom: 1px solid #333;
+    outline: none;
+    font-size: 16px;
+    background: none;
+}
+
+.contact-form button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #48b8d1 !important;
+    color: #ffffff;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.contact-form button:hover {
+    background-color: #555;
+}
+
+/* footer */
+
+#footer {
+    padding: 4%;
+    background-color: var(--myBlue);
+    color: rgb(255, 255, 255);
+}
+
+#footer p {
+    font-size: 1.3rem;
+}
+
+#footer i {
+    color: white;
+}
+
+#footer i:hover {
+    color: #ade80b;
+}
+
+#footer span {
+    color: #1edbe2;
+    text-decoration: underline;
+}
+
+.copyright {
+    text-align: center;
+    background-color: #212529;
+    padding: 20px;
+    color: #ffffff;
+}
+
+/* ---------------------------media query-------------------------- */
+
+@media only screen and (max-width: 576px) {
+    * {
+        box-sizing: border-box;
+    }
+
+    nav,
+    #banner,
+    #portfolio,
+    #about,
+    #contact,
+    #footer,
+    .portfolioCard {
+        width: 100%;
+        margin: 0;
+    }
+
+    /****nav****/
+    nav {
+        color: rgb(68, 99, 223);
+        padding: 10px;
+    }
+
+    nav #menuItems {
+        display: none;
+        position: absolute;
+        left: 0;
+        top: 50px;
+        width: 100%;
+        background-color: var(--myBlue);
+        padding-left: 10%;
+        height: 60px;
+    }
+
+    nav #menuButton {
+        width: 20px;
+        display: block;
+    }
+
+    nav h1 {
+        font-size: 15px;
+    }
+
+    /****banner****/
+    #banner {
+        padding-top: 20px;
+        padding-bottom: 30px;
+    }
+
+    #banner h1 {
+        font-size: 20px;
+    }
+
+    #banner #list {
+        font-size: 17px;
+    }
+
+    /****portfolio****/
+    #portfolio h1 {
+        font-size: 23px;
+    }
+
+    #portfolio {
+        padding: 23px;
+    }
+
+    #portfolioGallery {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 10px;
+    }
+
+    .portfolioCard {
+        aspect-ratio: 16 / 12;
+        margin-bottom: 10px;
+    }
+
+    /****about ****/
+    #about {
+        font-size: 5px;
+        max-width: 100%;
+        height: 700px;
+        padding-top: 30px;
+    }
+
+    #about p {
+        font-size: 40px;
+    }
+
+    #about h4 {
+        font-size: 17px;
+    }
+
+    .left-text {
+        left: 5%;
+        width: 45%;
+    }
+
+    .right-text {
+        right: 3%;
+        width: 40%;
+    }
+
+    .btn {
+        margin-top: 430px;
+
+    }
+
+    /****form ****/
+    #contact .contact-form {
+        padding: 35px;
+    }
+
+
+    #contact .contact-form {
+        width: 320px;
+    }
+
+    #contact h1 {
+        font-size: 28px;
+    }
+
+    /****footer ****/
+    #footer p {
+        font-size: 10px;
+    }
+
+    #footer h2 {
+        font-size: 15px;
+    }
+
+    /****copyright****/
+    .copyright p {
+        font-size: small;
+    }
+}
+
+
+@media (max-width: 600px) {
+
+    /* form */
+    .form-container {
+        width: 100%;
+        padding: 15px;
+    }
+}
+
+@media (max-width: 950px) {
+
+    /****menu ****/
+    nav #menuItems {
+        font-size: 12px !important;
+    }
+}
+
+@media (max-width: 768px) {
+
+    /****about ****/
+    #about {
+        font-size: 5px;
+        max-width: 100%;
+        height: 700px;
+        padding-top: 30px;
+    }
+
+    #about p {
+        font-size: 35px;
+    }
+
+    #about h4 {
+        font-size: 17px;
+    }
+
+    .left-text {
+        left: 5%;
+        width: 45%;
+
+    }
+
+    .right-text {
+        right: 3%;
+        width: 40%;
+
+    }
+}
